@@ -3,6 +3,41 @@ import {Players} from './../imports/api/players';
 
 Meteor.startup(() => {
 
+  //Object Spread Operator ...
+
+  let user = {
+    name: "Oleg",
+    location: "Toronto",
+    age: 0
+  }
+
+  let person = {
+    ...user,
+    age: 27
+  };
+
+
+  let bike = 'BMW';
+  let stuff = {
+    bike
+  };
+
+  let house = {
+    bedrooms: 2,
+    bathroom: 1.5
+  }
+
+  let yearbuilt = 1990;
+
+  let newHouse = {
+    ...house,
+    bedrooms:3,
+    yearbuilt,
+    flooring: 'Carpet'
+  }
+  //folowimng
+
+  console.log(newHouse)
 
   // class Person {
   //   constructor(name= 'Anonymous', age =21){
